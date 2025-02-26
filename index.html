@@ -2,61 +2,127 @@
 
 <html lang="en">
 <head>
-	<title> Chill-flame </title>
+    <title> Clever-Clévon </title>
 
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link href="style.css" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 
-	<style>
-		h1 {
-			font-size: 70px;
+    <style>
+		body {
+            margin: 0;
+            padding: 0;
+		}
+		.math-container {
+			position: relative;
+			top: -40px;
 			text-align: center;
-			color: lime;
+        }
+        .math-container a {
+			display: inline-block;
+			color: black;
+            text-decoration: none;
+			padding: 2px;
+        }
+		.math-container a:visited {
+			color: black;
 		}
-		h2 {
-			font-size: 10px;
-			text-align: left;
-			color: skyblue;
-			margin-bottom: 80px;
+		.math-container a:hover {
+			/* background-color: rgba(255, 0, 0, 0.3); /* 🔥 호버링 시 빨간 배경 */
+			border: 2px solid red; /* 🔥 빨간 테두리 */
+			/* border-radius: 3px; /* 🔹 모서리를 둥글게 */
 		}
-		p {
-			font-size: 30px;
+		t0 {
+			font-size: 60px;
 			text-align: center;
-			color: red;
-			margin-bottom: 100px;
+			color: black;
 		}
-		p strong {
-			font-size: 100px;
-			color: pink;
-		}
-		img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		.big-blue-text {
-			font-size: 64px;
-			color: blue;
-		}
-	</style>
+        h1 {
+            font-size: 70px;
+            text-align: center;
+            color: lime;
+        }
+        h2 {
+            font-size: 10px;
+            text-align: left;
+            color: skyblue;
+            margin-bottom: 80px;
+        }
+        p {
+            font-size: 30px;
+            text-align: center;
+            color: red;
+            margin-bottom: 100px;
+        }
+        p strong {
+            font-size: 100px;
+            color: pink;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .big-blue-text {
+            font-size: 64px;
+            color: blue;
+        }
+    </style>
+
+    <!-- MathJax for LaTeX rendering --> 
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelectorAll('.math-container a').forEach(link => {
+                    link.setAttribute("target", "_blank");
+                });
+            }, 1000); // MathJax 렌더링을 기다리기 위해 약간의 지연 추가
+        });
+    </script>
 </head>
 
 <body>
-<h4> Chill-flame of </h4>
-<img src="assets/test.jpg" width="500">
-<h2> I love HTML! </h2>
+	<t0 class="math-container">
+		\[
+		\begin{split}
+			\href{https://en.wikipedia.org/wiki/Natural_units}{1} \href{https://en.wikipedia.org/wiki/Planck_units}{l_{\mathrm{P}}} \href{https://en.wikipedia.org/wiki/E_(mathematical_constant)}{\mathrm{e}} \href{https://en.wikipedia.org/wiki/Velocity}{\overrightarrow{v}} \href{https://en.wikipedia.org/wiki/E_(mathematical_constant)}{\mathrm{e}} \href{https://en.wikipedia.org/wiki/Ricci_curvature}{R_{\mu\nu}}
+			&-\mathit{Cl\acute{e}von}
+			\\[-5pt]
+			\mathit{Clever}
+			&-\href{https://en.wikipedia.org/wiki/Natural_units}{1} \href{https://en.wikipedia.org/wiki/Planck_units}{l_{\mathrm{P}}} \href{https://en.wikipedia.org/wiki/Velocity}{\overrightarrow{v}} \href{https://en.wikipedia.org/wiki/Big_O_notation}{\mathcal{O}} \href{https://en.wikipedia.org/wiki/Avogadro_constant}{N_{\mathrm{A}}}
+		\end{split}
+		\]
+	</t0>
 
-<p> I've <em>never</em> built my own website <strong>before</strong>. This is my first time to make my own website and I'm so excited to learn HTML! </p>
-<p> This is for example of hyperlink: <a class="big-blue-text" href="https://physics.snu.ac.kr" target="_blank">서울대학교 물리천문학부</a> 예시!</p>
+    <p> I've <em>never</em> built my own website <strong>before</strong>. This is my first time to make my own website and I'm so excited to learn HTML! </p>
+    
+    <p> This is for example of hyperlink: 
+        <a class="big-blue-text" href="https://physics.snu.ac.kr" target="_blank">
+            서울대학교 물리천문학부
+        </a> 예시!
+    </p>
 
-<a href="nav/about/about.html"> about </a>
-<a href="nav/lectures/lectures.html"> lectures </a>
+    <a href="nav/about/about.html"> about </a>
+    <a href="nav/lectures/lectures.html"> lectures </a>
 
-<p class="big-blue-text"> Second paragraph </p>
+    <p class="big-blue-text"> Second paragraph </p>
+
+    <!-- LaTeX Math Example -->
+    <h1> MathJax LaTeX Example </h1>
+    
+    <p> Inline equation: \( E = mc^2 \) </p>
+
+    <p> Block equation: </p>
+    $$
+    \int_{0}^{\infty} e^{-x^2} \,dx = \frac{\sqrt{\pi}}{2}
+    $$
 
 </body>
 </html>
-
