@@ -2,15 +2,29 @@
 
 <html lang="en">
 <head>
-    <title> My First Website - about </title>
+    <title> Clever-Clévon </title>
+
     <meta charset="UTF-8">
-    <style>
-        img {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- MathJax for LaTeX rendering --> 
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelectorAll('.math-container a').forEach(link => {
+                    link.setAttribute("target", "_blank");
+                });
+            }, 1000); // MathJax 렌더링을 기다리기 위해 약간의 지연 추가
+        });
+    </script>
 </head>
 
 <body>
@@ -19,5 +33,23 @@
     <img src="../../assets/test.jpg" width="500">
     <a href="../../index.html"> main index file </a>
     <a href="../lectures/lectures.html"> lectures page </a>
+
+    <p1> This is for example of hyperlink: 
+        <a class="big-blue-text" href="https://physics.snu.ac.kr" target="_blank">
+            서울대학교 물리천문학부
+        </a> 예시!
+    </p1>
+
+    <p1 class="big-blue-text"> Second paragraph </p1>
+
+    <!-- LaTeX Math Example -->
+    <h1> MathJax LaTeX Example </h1>
+    
+    <p1> Inline equation: \( E = mc^2 \) </p1>
+
+    <p1> Block equation: </p1>
+    $$
+    \int_{0}^{\infty} e^{-x^2} \,dx = \frac{\sqrt{\pi}}{2}
+    $$
 </body>
 </html>
